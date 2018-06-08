@@ -7,12 +7,14 @@ class School
     @roster = {}
   end 
   
-  def add_student(student_Name, grade)
+  def add_student(student_name, grade)
     unless @roster.keys.include?(grade)
       @roster[grade] = []
     end
     
-    @roster[grade] << student_Name
+    unless @roster[grade].include?(student_name)
+      @roster[grade] << student_name
+    end
   end
   
   

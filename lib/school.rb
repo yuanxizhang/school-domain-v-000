@@ -22,7 +22,7 @@ class School
   end
   
   def sort 
-    sorted = @roster.sort_by { |grade, student_list| student_list }
+    sorted = @roster.each { |grade, student_list| student_list.sort }
   end
   
 end
